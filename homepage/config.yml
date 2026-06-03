@@ -17,13 +17,10 @@ data:
 
   docker.yaml: ""
   bookmarks.yaml: |
-    - GitHub repositories:
-      - secondhomelab-k8s:
+    - GitHub:
+      - secondhomelab:
           - icon: github
-            href: https://github.com/maximemoreillon/secondhomelab-k8s
-      - secondhomelab-talos:
-          - icon: github
-            href: https://github.com/maximemoreillon/secondhomelab-talos
+            href: https://github.com/secondhomelab
 
   custom.css: ""
   custom.js: ""
