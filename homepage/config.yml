@@ -12,8 +12,10 @@ data:
   services.yaml: ""
 
   widgets.yaml: |
+    # - logo:
+    #     icon: https://avatars.githubusercontent.com/u/290229801
     - greeting:
-        text_size: 4xl
+        text_size: 2xl
         text: Welcome to Second Home(lab)
 
   docker.yaml: ""

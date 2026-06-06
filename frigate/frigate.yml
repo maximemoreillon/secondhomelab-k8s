@@ -20,7 +20,7 @@ spec:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 16Gi
+      storage: 32Gi
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -93,16 +93,19 @@ metadata:
 spec:
   ports:
     - port: 8971 # 5000 for non-autnenticating proxy
-      nodePort: 30193
   selector:
     app.kubernetes.io/name: frigate
-  type: NodePort
+  type: ClusterIP
 ---
 apiVersion: gateway.networking.k8s.io/v1
 kind: HTTPRoute
 metadata:
   name: frigate
   namespace: frigate
+  annotations:
+    gethomepage.dev/enabled: "true"
+    gethomepage.dev/name: Frigate
+    gethomepage.dev/icon: frigate
 spec:
   hostnames:
     - frigate.secondhomelab.com
