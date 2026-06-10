@@ -4,6 +4,7 @@ metadata:
   name: nginx-html
   namespace: test
 spec:
+  storageClassName: local-path-provisioner-ssd
   accessModes:
     - ReadWriteOnce
   resources:
