@@ -2,10 +2,19 @@
 
 ```mermaid
 flowchart LR
-u[User] -- HTTPS --> c[Cloudflare]
-c-- tunnel --> g[Envoy gateway]
-g -- HTTP --> a[App A]
-g -- HTTP --> b[App B]
+u1[User]
+u2[User]
+c[Cloudflare]
+g[Envoy gateway]
+a[App A]
+b[App B]
+
+u1 -- https://app1.secondhomelab.com --> c
+u2 -- https://app2.secondhomelab.com --> c
+
+c-- tunnel --> g
+g -- HTTP --> a
+g -- HTTP --> b
 ```
 
 ## Controller installation
