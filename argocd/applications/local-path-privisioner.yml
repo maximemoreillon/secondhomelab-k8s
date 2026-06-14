@@ -11,7 +11,7 @@ spec:
   sources:
     - repoURL: oci://ghcr.io/rancher/local-path-provisioner/charts
       chart: local-path-provisioner
-      targetRevision: 0.0.36
+      targetRevision: v0.0.36
       helm:
         valueFiles:
           - $values/local-path-provisioner/values.yml
